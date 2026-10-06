@@ -1,0 +1,74 @@
+:root > * {
+  --md-primary-fg-color: hsl(128, 47%, 30%);
+  --md-primary-fg-color--light: hsl(128, 30%, 50%);
+  --md-primary-fg-color--dark: hsl(128, 30%, 10%);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-accent-fg-color: hsl(128, 47%, 65%);
+  --md-accent-fg-color--transparent: hsla(128, 47%, 65%, 0.1);
+}
+
+[data-md-color-scheme="default"] {
+  --md-accent-fg-color: hsl(128, 47%, 30%);
+  --md-accent-fg-color--transparent: hsla(128, 47%, 30%, 0.1);
+}
+
+.md-typeset details.api-member {
+  margin: 1.25em 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+.md-typeset details.api-member > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  list-style: none;
+}
+
+.md-typeset details.api-member > summary::-webkit-details-marker {
+  display: none;
+}
+
+.md-typeset details.api-member > summary::before {
+  position: static;
+  flex: 0 0 auto;
+  width: 0;
+  height: 0;
+  border-top: 0.22em solid transparent;
+  border-bottom: 0.22em solid transparent;
+  border-inline-start: 0.32em solid currentColor;
+  background: none;
+  mask: none;
+  -webkit-mask: none;
+  content: "";
+}
+
+.md-typeset details.api-member[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.md-typeset details.api-member > summary::after {
+  display: none;
+}
+
+.md-typeset details.api-member > summary > :is(h2, h3, h4, h5, h6) {
+  margin: 0;
+  font-size: 1em;
+}
+
+.md-typeset .api-member-content {
+  margin-inline-start: 1em;
+}

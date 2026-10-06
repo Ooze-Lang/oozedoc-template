@@ -1,0 +1,2 @@
+mkdocs-material>=9.2,<10
+-e ./mkdoc/pygments-ooze

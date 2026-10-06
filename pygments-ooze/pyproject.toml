@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pygments-ooze"
+version = "0.1.0"
+description = "Ooze syntax highlighting for the documentation site"
+requires-python = ">=3.10"
+dependencies = ["Pygments>=2.16,<3"]
+
+[project.entry-points."pygments.lexers"]
+ooze = "ooze_pygments:OozeLexer"
+
+[tool.setuptools]
+packages = ["ooze_pygments"]
